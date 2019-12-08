@@ -12,4 +12,6 @@ public interface ReadFileService {
 	List<Account> findAll();
 
 	boolean saveDataFromUploadFile(MultipartFile file);
+
+	void store(MultipartFile file);
 }

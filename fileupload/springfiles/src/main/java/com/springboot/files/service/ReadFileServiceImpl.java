@@ -2,6 +2,8 @@ package com.springboot.files.service;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
@@ -130,5 +132,16 @@ public class ReadFileServiceImpl implements ReadFileService {
 			// TODO: handle exception
 		}
 		return false;
+	}
+
+	public void store(MultipartFile file) {
+		java.nio.file.Path rootLocation = Paths.get("SharedStore");
+		try {
+			System.out.println(file.getOriginalFilename());
+			System.out.println(rootLocation.toUri());
+			Files.copy(file.getInputStream(), rootLocation.resolve(file.getOriginalFilename()));
+		} catch (Exception e) {
+			throw new RuntimeException("FAIL!");
+		}
 	}
 }
