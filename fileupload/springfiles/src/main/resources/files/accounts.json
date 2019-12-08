@@ -1,0 +1,12 @@
+[
+  {
+    "accountName": "Kasi",
+    "accountNumber": "IND1001",
+    "withdrawalAmount": "100"
+  },
+  {
+    "accountName": "Simbu",
+    "accountNumber": "PUN1001",
+    "withdrawalAmount": "2000"
+  }
+]
