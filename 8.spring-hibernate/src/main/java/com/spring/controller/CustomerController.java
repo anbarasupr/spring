@@ -17,7 +17,6 @@ import com.spring.service.CustomerService;
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
-
 	// need to inject our customer service
 	@Autowired
 	private CustomerService customerService;
