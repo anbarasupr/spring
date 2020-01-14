@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.spring</groupId>
-	<artifactId>spring-security-demo</artifactId>
+	<artifactId>spring-security-auth-jdbc-plaintext</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
 
-	<name>spring-security-demo</name>
+	<name>spring-security-auth-jdbc-plaintext</name>
 
 	<properties>
 		<springframework.version>5.0.2.RELEASE</springframework.version>
@@ -51,8 +51,19 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${springsecurity.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.5.2</version>
 		</dependency>
 
 		<!-- Mysql Connector -->
@@ -65,6 +76,7 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
@@ -85,7 +97,7 @@
 	<!-- TO DO: Add support for Maven WAR Plugin -->
 
 	<build>
-		<finalName>spring-security-demo</finalName>
+		<finalName>spring-security-auth-jdbc-plaintext</finalName>
 
 		<pluginManagement>
 			<plugins>

@@ -6,9 +6,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class LoginController {
 
-	@GetMapping("/showMyLoginPage")
-	public String showMyLoginPage() {		
+	@GetMapping("/fancyLoginPage")
+	public String fancyLoginPage() {		
 		return "fancy-login";		
-		//return "plain-login";
+	}
+	
+	@GetMapping("/fancyCSRFLoginPage")
+	public String fancyCSRFLoginPage() {		
+		return "fancy-login-csrf";		
+	}
+	
+	@GetMapping("/plainLoginPage")
+	public String plainLoginPage() {		
+		return "plain-login";
 	}
 }
