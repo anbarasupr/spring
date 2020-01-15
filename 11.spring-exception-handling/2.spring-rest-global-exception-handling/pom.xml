@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.spring</groupId>
-	<artifactId>spring-security-auth-jdbc-schema-change</artifactId>
+	<artifactId>spring-rest-global-exception-handling</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
 
-	<name>spring-security-auth-jdbc-schema-change</name>
+	<name>spring-rest-global-exception-handling</name>
 
 	<properties>
 		<springframework.version>5.0.2.RELEASE</springframework.version>
@@ -97,7 +97,7 @@
 	<!-- TO DO: Add support for Maven WAR Plugin -->
 
 	<build>
-		<finalName>spring-security-auth-jdbc-schema-change</finalName>
+		<finalName>spring-rest-global-exception-handling</finalName>
 
 		<pluginManagement>
 			<plugins>
