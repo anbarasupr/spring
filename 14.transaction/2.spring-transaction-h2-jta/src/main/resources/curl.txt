@@ -1,0 +1,18 @@
+curl -X POST -H "Content-Type: application/json; charset=UTF-8" -H "Accept: application/json" -d '{"name":"abc"}' http://localhost:8080
+
+curl -X GET http://localhost:8080
+
+
+curl -X POST -H "Content-Type: application/json; charset=UTF-8" -H "Accept: application/json" -d @C:/curl_769_1_ssl/test.json http://localhost:8080
+
+curl -X POST -H "Content-Type: application/json; charset=UTF-8" -H "Accept: application/json" -d @C:/curl_769_1_ssl/test.json http://localhost:8080?rollback=true
+
+
+-- distributed--
+
+curl -X GET -H "Accept: application/json; charset=UTF-8" http://localhost:8080/pets
+curl -X GET http://localhost:8080/messages
+
+
+
+curl -X POST -H "Content-Type: application/json; charset=UTF-8" -H "Accept: application/json" -d @C:/curl_769_1_ssl/test.json http://localhost:8080?rollback=true
